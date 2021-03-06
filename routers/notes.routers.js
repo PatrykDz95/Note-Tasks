@@ -1,5 +1,5 @@
 const express = require('express');
-const Notes = require('../models/notes');
+const Notes = require('../models/note');
 //const auth = require('../middleware/auth');
 const router = new express.Router();
 

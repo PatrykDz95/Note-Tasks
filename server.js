@@ -26,12 +26,9 @@ app.use(
 app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
-// Passport config
+
 app.use("/api/users", user);
 app.use("/notes", notes);
-
-// app.use("/user", user);
-// app.use("/notes", notes);
 
 app.listen(port, () => {
     console.log(`Express is running`);

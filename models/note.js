@@ -12,11 +12,11 @@ const noteSchema = new mongoose.Schema({
         required: true,     
     },
     //The note expires after 5 sec
-    sessionActivity: { 
-        type: Date, 
-        expires: '5s', 
-        default: Date.now
-    }
+    // sessionActivity: { 
+    //     type: Date, 
+    //     expires: '5s', 
+    //     default: Date.now
+    // }
 });
 
 noteSchema.pre("save", function(next) {
