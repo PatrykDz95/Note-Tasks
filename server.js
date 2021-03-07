@@ -4,7 +4,7 @@ const user = require('./routers/user.routers');
 const notes = require('./routers/notes.routers');
 const app = express();
 const cors = require('cors')
-const bodyParser = require("body-parser");
+//const bodyParser = require("body-parser");
 const passport = require("passport");
 
 const port = process.env.PORT || 5000
@@ -16,12 +16,7 @@ app.use(cors({
   }));
   
 // Bodyparser middleware
-app.use(
-  bodyParser.urlencoded({
-    extended: false
-  })
-);
-
+app.use(express.json())
 // Passport middleware
 app.use(passport.initialize());
 // Passport config

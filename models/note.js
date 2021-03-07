@@ -3,13 +3,12 @@ const mongoose = require('mongoose');
 const noteSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true,
-        trim: true
+        //required: true,
     },
     note: {
         type: String,
-        unique: true,
-        required: true,     
+        //unique: true,
+        //required: true,     
     },
     //The note expires after 5 sec
     // sessionActivity: { 
