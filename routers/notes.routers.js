@@ -1,13 +1,18 @@
 const express = require('express');
 const Notes = require('../models/note');
-//const auth = require('../middleware/auth');
 const router = new express.Router();
 
+// @route GET notes/all
+// @desc Get all notes
+// @access Private
 router.get('/all', async (req, res) => {
     const note = await Notes.find();
 	res.send(note);
 })
 
+// @route POST notes/add
+// @desc Post a note
+// @access Private
 router.post('/add', async (req, res) => {
     const note = new Notes(req.body);
     try {
@@ -17,31 +22,5 @@ router.post('/add', async (req, res) => {
         res.status(400).send(e);
     }
 });
-
-// router.get('/:id', auth, async (req, res) => {
-//     try {
-//         const api = await GeoAPI.findOne({_id: req.params.id});
-
-//         if (!api) {
-//             return res.status(404).send();
-//         }
-//         res.send(api);
-//     } catch (e) {
-//         res.status(500).send();
-//     }
-// })
-
-// router.delete('/:id', auth, async (req, res) => {
-//     try {
-//         const api = await GeoAPI.findOneAndDelete({ _id: req.params.id});
-
-//         if (!api) {
-//             res.status(404).send();
-//         }
-//         res.send(api);
-//     } catch (e) {
-//         res.status(500).send();
-//     }
-// });
 
 module.exports = router;

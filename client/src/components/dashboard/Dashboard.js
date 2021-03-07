@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-//import axios from 'axios';
 
 class Dashboard extends Component {
 
@@ -42,10 +41,8 @@ render() {
             <h4>
               <b>Hey there,</b> {user.name}
               {notesList}
-              <p className="flow-text grey-text text-darken-1">
-                You are logged into a full-stack{" "}
-                <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
-                
+              <p className="flow-text grey-text text-darken-1">               
+                This is your web application to create note!
               </p>
             </h4>
             <button

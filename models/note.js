@@ -3,19 +3,18 @@ const mongoose = require('mongoose');
 const noteSchema = new mongoose.Schema({
     title: {
         type: String,
-        //required: true,
+        required: true,
     },
     note: {
         type: String,
-        //unique: true,
-        //required: true,     
+        required: true,     
     },
-    //The note expires after 5 sec
-    // sessionActivity: { 
-    //     type: Date, 
-    //     expires: '5s', 
-    //     default: Date.now
-    // }
+    // The note expires after 200 sec
+    sessionActivity: { 
+        type: Date, 
+        expires: '200s', 
+        default: Date.now
+    }
 });
 
 noteSchema.pre("save", function(next) {

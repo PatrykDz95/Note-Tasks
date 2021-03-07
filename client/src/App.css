@@ -13,6 +13,14 @@
   }
 }
 
+#heading{
+  font-family: 'Cabin', sans-serif;
+}
+
+.card {
+/*add inline-display*/
+display: inline-block;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

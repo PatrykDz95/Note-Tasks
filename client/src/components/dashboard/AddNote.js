@@ -1,9 +1,4 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
-// import PropTypes from "prop-types";
-// import { connect } from "react-redux";
-// import { loginUser } from "../../actions/authActions";
-// import classnames from "classnames";
 import axios from "axios";
 
 
@@ -96,39 +91,8 @@ class AddNote extends Component {
             </div>
           </div>
         );
-      }
     }
+}
 
-//     render() {
-//         return (
-//             <div className="wrapper">
-//                 <form onSubmit={this.onSubmit}>
-//                     <div className="form-group" >
-//                         <label>Add User Name</label>
-//                         <input type="text" value={this.state.title} onChange={this.onChangeTitle} className="form-control" />
-//                     </div>
-//                     <div className="form-group">
-//                         <label>Add Note</label>
-//                         <input type="text" value={this.state.note} onChange={this.onChangeNote} className="form-control" />
-//                     </div>
-//                     <div className="form-group">
-//                         <input type="submit" value="Create User" className="btn btn-success btn-block" />
-//                     </div>
-//                 </form>
-//             </div>
-//         )
-//     }
-// }
-
-// AddNote.propTypes = {
-//   loginUser: PropTypes.func.isRequired,
-//   auth: PropTypes.object.isRequired,
-//   errors: PropTypes.object.isRequired
-// };
-
-// const mapStateToProps = state => ({
-//   auth: state.auth,
-//   errors: state.errors
-// });
 
 export default AddNote;

@@ -4,7 +4,6 @@ const user = require('./routers/user.routers');
 const notes = require('./routers/notes.routers');
 const app = express();
 const cors = require('cors')
-//const bodyParser = require("body-parser");
 const passport = require("passport");
 
 const port = process.env.PORT || 5000

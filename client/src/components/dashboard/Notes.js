@@ -1,8 +1,4 @@
 import React, { Component } from "react";
-// import PropTypes from "prop-types";
-// import { connect } from "react-redux";
-// import { logoutUser } from "../../actions/authActions";
-//import axios from 'axios';
 
 class Notes extends Component {
 
@@ -27,55 +23,34 @@ componentDidMount() {
 }
 
 render() {
-  //const { user } = this.props.auth;
   const { notes } = this.state;
 
   const notesList = notes.map(note => {
     return <tr key={note._id}> 
-    <div class="row s3">
-    <div class="row s3">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">{note.title}</span>
-          <p>{note.note}</p>
-        </div>
-        <div class="card-action">
-        </div>
-      </div>
-    </div>
-  </div> 
-
-  {/* <div class="140px">
-    <div class="col s12 m6">
-      <div class="card-panel teal">
-        <span class="white-text">{note.title}
-        {note.note}
-        </span>
-      </div>
-    </div>
-  </div> */}
-
-    </tr>
+      <td>{note.title}</td>
+      <td>{note.note}</td>
+  </tr>
     });
       
       
 
   return (
     
-            <p>{notesList}</p>
+    <table class="col s6">
+    <thead>
+      <tr>
+          <th>Title</th>
+          <th>Note</th>
+      </tr>
+    </thead>
+    <tbody>
+      {notesList}
+    </tbody>
+  </table>
               
          
         );
   }
 }
-
-// Notes.propTypes = {
-//   logoutUser: PropTypes.func.isRequired,
-//   auth: PropTypes.object.isRequired
-// };
-
-// const mapStateToProps = state => ({
-//   auth: state.auth
-// });
 
 export default Notes;
