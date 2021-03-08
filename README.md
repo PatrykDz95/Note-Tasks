@@ -1,6 +1,6 @@
 # NoteTask
 
-Minimal full-stack MERN app with authentication using passport and JWTs.
+A full-stack MERN app with authentication using passport and JWT to POST and GET Notes.
 
 This project uses the following technologies:
 
